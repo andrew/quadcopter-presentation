@@ -80,39 +80,70 @@
 </section>
 
 <section class="slide">
-	<h1>controlled via node.js and socket.io</h1>
+	<h2>Controlled via node.js and socket.io</h2>
+  <img src='images/nodejs.png'/>
 </section>
 
 <section class="slide">
-	<h1> web socket in slides, sends a command every transition</h1>
+	<h2>Web socket in slides, sends a command every transition</h2>
+  <img src='images/wtf.png'/>
 </section>
 
 <section class="slide">
-	<h1>example command</h1>
+	<h2>drone.clockwise(0.5)</h2>
+  <h3>
+    <pre>
+  drone
+    .after(4000, ->
+      this.up(0.5)
+    )
+    .after(3000, ->
+      this.animate('flipAhead', 15)
+    )
+    .after(3000, ->
+      console.log 'stop'
+      this.stop()
+      this.land()
+      console.log 'landed'
+    )
+    </pre>
+  </h3>
 </section>
 
 <section class="slide">
-	<h1>another command</h1>
+	<h2>Video Stream</h2>
+  <iframe src='http://localhost:3000' width='640' height='360'></iframe>
+  <h3>https://github.com/bkw/node-dronestream</h3>
 </section>
 
 <section class="slide">
-	<h1>node-ar-drone</h1>
+	<h2>node-ar-drone</h2>
+  <img src='images/felix.jpeg'/>
+  <h3>https://github.com/felixge/node-ar-drone</h3>
 </section>
 
 <section class="slide">
-	<h1>why?</h1>
+	<h2>Why Node?</h2>
+  <img src='images/io.jpg'/>
+  <h3>Lots of IO and streaming data</h3>
 </section>
 
 <section class="slide">
-	<h1>it's a flying robot!!</h1>
+	<h2>It's a flying robot!!</h2>
+  <h3>We are living in the future!</h3>
+  <img src='images/future.jpg'/>
 </section>
 
 <section class="slide">
-	<h1>fun!</h1>
+	<h2>fun!</h2>
+  <h3>Vision detection, games, AI</h3>
+  <img src='images/game.jpg'/>
 </section>
 
 <section class="slide">
-	<h1>nodecopter</h1>
+	<h2>Nodecopter in the office</h2>
+    <img src='images/nodecopter.png'/>
+  <h3>Event early next year - http://nodecopter.com</h3>
 </section>
 
 <!-- End slides. -->
@@ -173,7 +204,7 @@
 		$.deck('.slide');
     $('#start').click(function(){
       $.deck('next');
-		   timer = setInterval(nextSlide, 1000*2)
+		   timer = setInterval(nextSlide, 1000*15)
 		})
 	});
   

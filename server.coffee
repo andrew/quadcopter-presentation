@@ -33,32 +33,96 @@ io.sockets.on "connection", (socket) ->
       when 'takeoff'
         drone.takeoff()
       when 'clockwise'
-        drone.clockwise(0.5)
-        drop.stop()
+        drone
+          .after(3000, ->
+            this.clockwise(0.7)
+          )
+          .after(3000, ->
+            this.counterClockwise(0.7)
+          )
+          .after(3000, ->
+            this.stop()
+          )
       when 'counterClockwise'
-        drone.counterClockwise(0.5)
-        drop.stop()
-      when 'up'
-        drone.up(0.5)
-        drop.stop()
+        drone
+          .after(3000, ->
+            this.counterClockwise(0.7)
+          )
+          .after(3000, ->
+            this.clockwise(0.7)
+          )
+          .after(3000, ->
+            this.stop()
+          )
       when 'down'
-        drone.down(0.5)
-        drop.stop()
+        drone
+          .after(3000, ->
+            this.down(0.2)
+          )
+          .after(3000, ->
+            this.up(0.2)
+          )
+          .after(3000, ->
+            this.stop()
+          )
+      when 'up'
+        drone
+          .after(3000, ->
+            this.up(0.2)
+          )
+          .after(3000, ->
+            this.down(0.2)
+          )
+          .after(3000, ->
+            this.stop()
+          )
       when 'flipAhead'
-        drone.flipAhead(15)
-        drop.stop()
+        drone
+          .after(3000, ->
+            this.up(0.2)
+          )
+          .after(3000, ->
+            this.animate('flipAhead', 15)
+          )
+          .after(3000, ->
+            this.stop()
+          )
       when 'front'
-        drone.front(0.5)
-        drop.stop()
+        drone
+          .after(3000, ->
+            this.front(0.1)
+          )
+          .after(3000, ->
+            this.back(0.1)
+          )
+          .after(3000, ->
+            this.stop()
+          )
       when 'back'
-        drone.back(0.5)
-        drop.stop()
+        drone
+          .after(3000, ->
+            this.back(0.1)
+          )
+          .after(3000, ->
+            this.front(0.1)
+          )
+          .after(3000, ->
+            this.stop()
+          )
       when 'yawShake'
-        drone.yawShake(15)
-        drop.stop()
+        drone.animate('yawShake', 15)
+        drone.stop()
       when 'flipLeft'
-        drone.flipLeft(15)
-        drop.stop()
+        drone
+          .after(3000, ->
+            this.up(0.2)
+          )
+          .after(3000, ->
+            this.animate('flipLeft', 15)
+          )
+          .after(3000, ->
+            this.stop()
+          )
       when 'land'
         drone.land()
       else
