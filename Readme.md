@@ -4,11 +4,11 @@ An automated ignite style presentation that sends commands to a connected Parrot
 
 ## Libraries
 
-slides - deck.js (https://github.com/imakewebthings/deck.js)
-webserver - express (https://github.com/visionmedia/express)
-websockets - socket.io (https://github.com/LearnBoost/socket.io)
-drone client - node-ar-drone (https://github.com/felixge/node-ar-drone)
-video streaming - node-dronestream (https://github.com/bkw/node-dronestream)
+* slides - deck.js (https://github.com/imakewebthings/deck.js)
+* webserver - express (https://github.com/visionmedia/express)
+* websockets - socket.io (https://github.com/LearnBoost/socket.io)
+* drone client - node-ar-drone (https://github.com/felixge/node-ar-drone)
+* video streaming - node-dronestream (https://github.com/bkw/node-dronestream)
 
 ## Usage
 
