@@ -34,4 +34,4 @@ see the `commands` array at the bottom of `views/index.ejs` for commands to be s
 
 ## Copyright
 
-Copyright (c) 2012 Andrew Nesbitt. See [LICENSE](https://github.com/andrew/quadcopter-presentation/blob/master/LICENSE) for details.
+Copyright (c) 2013 Andrew Nesbitt. See [LICENSE](https://github.com/andrew/quadcopter-presentation/blob/master/LICENSE) for details.
